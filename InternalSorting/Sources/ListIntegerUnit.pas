@@ -17,18 +17,18 @@ implementation
 
 procedure TListInteger.FromStrings(const List: TStrings);
 var
-   OutPutList: TStringList;
-   i: integer;
+  OutPutList: TStringList;
+  i: integer;
 begin
-   Clear;
-   OutPutList := TStringList.Create;
-   try
-     OutPutList.DelimitedText := List.Text;
-     for i := 0 to OutPutList.Count - 1 do
-       Add(StrToInt(Trim(OutPutList[i])));
-   finally
-     OutPutList.Free;
-   end;
+  Clear;
+  OutPutList := TStringList.Create;
+  try
+    OutPutList.DelimitedText := List.Text;
+    for i := 0 to OutPutList.Count - 1 do
+      Add(StrToInt(Trim(OutPutList[i])));
+  finally
+    OutPutList.Free;
+  end;
 end;
 
 function TListInteger.ToStrings: TStrings;

@@ -5,7 +5,7 @@ unit ListProfitUnit;
 interface
 
 uses
-  Classes, SysUtils, GenericListUnit, Dialogs;
+  Classes, SysUtils, GenericListUnit;
 
 type
   TProfit = record
@@ -15,6 +15,8 @@ type
   end;
 
 operator > (a, b: TProfit): boolean;
+operator < (a, b: TProfit): boolean;
+operator <= (a, b: TProfit): boolean;
 
 type
   TListProfit = class(specialize TGList<TProfit>)
@@ -27,6 +29,16 @@ implementation
 operator > (a, b: TProfit): boolean;
 begin
   Result := a.Count > b.Count;
+end;
+
+operator < (a, b: TProfit): boolean;
+begin
+  Result := a.Count < b.Count;
+end;
+
+operator <= (a, b: TProfit): boolean;
+begin
+  Result := a.Count <= b.Count;
 end;
 
 procedure Split(Delimiter: char; Str: string; ListOfStrings: TStrings);

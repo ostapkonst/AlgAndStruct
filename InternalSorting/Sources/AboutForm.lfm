@@ -1,10 +1,10 @@
 object About: TAbout
-  Left = 545
+  Left = 315
   Height = 162
-  Top = 349
+  Top = 504
   Width = 289
   BorderStyle = bsDialog
-  Caption = 'О программе'
+  Caption = 'О программе...'
   ClientHeight = 162
   ClientWidth = 289
   Position = poMainFormCenter

@@ -41,7 +41,7 @@
       <Unit1>
         <Filename Value="MainForm.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="SortsForm"/>
+        <ComponentName Value="SortsMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit1>
@@ -61,9 +61,8 @@
         <IsPartOfProject Value="True"/>
       </Unit4>
       <Unit5>
-        <Filename Value="genericlistunit.pas"/>
+        <Filename Value="GenericListUnit.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="GenericListUnit"/>
       </Unit5>
     </Units>
   </ProjectOptions>

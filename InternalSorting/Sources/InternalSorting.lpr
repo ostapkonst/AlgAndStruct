@@ -15,7 +15,7 @@ uses
 begin
   RequireDerivedFormResource:=True;
   Application.Initialize;
-  Application.CreateForm(TSortsForm, SortsForm);
+  Application.CreateForm(TSortsMain, SortsMain);
   Application.CreateForm(TAbout, About);
   Application.Run;
 end.

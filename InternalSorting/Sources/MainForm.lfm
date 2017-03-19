@@ -1,84 +1,79 @@
-object SortsForm: TSortsForm
-  Left = 272
-  Height = 533
-  Top = 111
-  Width = 736
+object SortsMain: TSortsMain
+  Left = 357
+  Height = 493
+  Top = 201
+  Width = 600
   Caption = 'Внутренние сортировки'
-  ClientHeight = 513
-  ClientWidth = 736
+  ClientHeight = 473
+  ClientWidth = 600
+  Constraints.MinHeight = 493
+  Constraints.MinWidth = 600
   Menu = MainMenu
+  OnCreate = FormCreate
   Position = poDesktopCenter
   LCLVersion = '1.6.4.0'
   object PageControl: TPageControl
     Left = 0
-    Height = 513
+    Height = 473
     Top = 0
-    Width = 736
+    Width = 600
     ActivePage = SortingTab
     Align = alClient
     TabIndex = 0
     TabOrder = 0
     object SortingTab: TTabSheet
       Caption = 'Сортировка'
-      ClientHeight = 485
-      ClientWidth = 728
+      ClientHeight = 445
+      ClientWidth = 592
       object SortingSplitter: TPairSplitter
         Left = 0
-        Height = 485
+        Height = 445
         Top = 0
-        Width = 728
+        Width = 592
         Align = alClient
-        Position = 176
+        Position = 170
         object SortsSide: TPairSplitterSide
           Cursor = crArrow
           Left = 0
-          Height = 485
+          Height = 445
           Top = 0
-          Width = 176
-          ClientWidth = 176
-          ClientHeight = 485
+          Width = 170
+          ClientWidth = 170
+          ClientHeight = 445
+          Constraints.MinWidth = 170
           object SortsType: TRadioGroup
             Left = 5
-            Height = 68
+            Height = 125
             Top = 5
-            Width = 166
+            Width = 160
             Align = alTop
             AutoFill = False
             AutoSize = True
             BorderSpacing.Around = 5
             BorderSpacing.InnerBorder = 5
-            Caption = 'Тип сортировки'
+            Caption = 'Вид сортировки'
             ChildSizing.LeftRightSpacing = 6
             ChildSizing.ShrinkHorizontal = crsScaleChilds
             ChildSizing.ShrinkVertical = crsScaleChilds
             ChildSizing.Layout = cclLeftToRightThenTopToBottom
             ChildSizing.ControlsPerLine = 1
-            ClientHeight = 48
-            ClientWidth = 162
+            ClientHeight = 105
+            ClientWidth = 156
             ItemIndex = 0
             Items.Strings = (
               'Простым выбором'
               'Простым обменом'
+              'Быстрая сортировка'
+              'Простыми вставками'
+              'Методом Шелла'
             )
             TabOrder = 0
-          end
-          object SortButton: TButton
-            Left = 5
-            Height = 25
-            Top = 151
-            Width = 166
-            Align = alTop
-            BorderSpacing.Around = 5
-            Caption = 'Отсортировать'
-            Enabled = False
-            OnClick = SortButtonClick
-            TabOrder = 1
           end
           object DatasType: TRadioGroup
             Left = 5
             Height = 68
-            Top = 78
-            Width = 166
+            Top = 135
+            Width = 160
             Align = alTop
             AutoFill = False
             AutoSize = True
@@ -91,69 +86,184 @@ object SortsForm: TSortsForm
             ChildSizing.Layout = cclLeftToRightThenTopToBottom
             ChildSizing.ControlsPerLine = 1
             ClientHeight = 48
-            ClientWidth = 162
+            ClientWidth = 156
             Enabled = False
             ItemIndex = 0
             Items.Strings = (
               'Массив чисел'
               'Массив записей'
             )
-            TabOrder = 2
+            TabOrder = 1
           end
-          object ClearButton: TButton
+          object WarningImage: TImage
+            Left = 0
+            Height = 64
+            Top = 238
+            Width = 170
+            Align = alTop
+            AutoSize = True
+            Center = True
+            Picture.Data = {
+              1754506F727461626C654E6574776F726B477261706869634A0C000089504E47
+              0D0A1A0A0000000D4948445200000040000000400806000000AA6971DE00000C
+              1149444154789CED9A7B705CF575C73FE777EFEEDD87B4BB926C0BCB966C13DB
+              05F911C7C44F08988743307578149C9684D0187008B443203813B7751C480107
+              C68176324DF21793076992765AA629FD2343C2F4C1232E29909632509EB69328
+              60598FD56A9FF777FAC7DD5D4BD6AE6C49BB7232C999392369F7F738E77BBEE7
+              FCCEEFEAC26FB9C8AC6F2865ADF19D2A589D657B66753381EBB7C2839F84547C
+              FC77AAF0836761D7011818993D9B9CD9DA488035EF817FFA22C43D30068C41CA
+              8A017E6F214442F0C47FC16C11C1CCD23E888107768118011317C4BD1E38021C
+              03772F4EAB880971DB15F0DE33678F9AB3C20011F8F026F8CCB520A11418E762
+              B1D9BF57F1128817112D6C5113E9C7491E44F32CEBB23CFAE3202D9A2DB30240
+              5B2B7CF7CFA12D1945DC5448FCFEC734B1659E76DE80262E109C1432FAB34D98
+              D6471027D3D391E5676FC2AB479A6F5BD353C008DCF66158D469C049809FBE55
+              A3ABCED696B5D0FFB870F41FD050279ABC24A5A5812F62E2821365FF8DC1DC66
+              4BD319B0B813BE7E3B446371C47873B199BFA37D5B94BE4744726F22855FC2C8
+              F3426233E4DE5A83DA1F205E5F329245ADF21F2F35D7BEA632C008ECF94348C5
+              5D705A85D2E0DD242F6863E009288DA0AAA82AD8121C7D0C52173B148F3D24E2
+              897162DCB61D16CF6BA6854D648000E7AF822FED0409271091D588FB35892E37
+              0C3D3D91DC362F843A80508F968EBDAC26F652C4E448C62D8F1F6CDEB1D83406
+              8881CFED001C0F4C4C280E3E4CEA2257FB7F882AB575F069D1C43AA194D92F6A
+              A2E2C6B96E0B9CB7B279C762531820021FBD106EDB2E985012217F35E1F9BB45
+              AD907DA3BE2F6AC1CFA2B16549F2870B98967F470BF474F87CE75F9B732C3685
+              01A916B8EF8F419C2848384269F401126B45077F2275A35FD1D1D704AF5350FD
+              2CEA2F10A785F3560AD76D09806DB4341C0023F0A96DD01637E0C4C11FBA5313
+              6B97E8C041546DE0A49D4415F4E89368DBF9712D0DEDC744C43851EEBB61E2FD
+              A111D2F01458340FBE7D1798701C116781D8E2DFD2DAEB31F49CC0711A6B0986
+              DF0893792B4C71C4104EF8413814C4E685F019E06757A8CD3FA1123E1C313972
+              05E5A9FF6D6C416C28A98CC0B7EE82ED1B5C4CA45DC41F7C44DA2FF8B80E3C03
+              FE88A081F1B93E9777FF6D0385635154151121D4364CD7E5CFE1B6D832D51D95
+              332E47FBFEF920A1B99B6D2963FDFC086BFE14DE7AA77136378C01029CB702F6
+              5D0726D48A60378ADBF230262A64DE14554083C8FFE2F1F5FCEAA7BF62E4977D
+              8CBE7B94D1778F921F82704B0BF18583C182AA82F5C1EBECD242FFDB62A22FA8
+              16E89E6379EC99C6B1A06135C018F8CA2D20C6030909C5910324DF6774E03FA9
+              3AAF907E3BC5B1574728E6F258C0AA6281DC509A632F25500BD8F2F891D78468
+              B7E067EF55681527C6E5E7C0B9BD8DA36E430010815D1F829EB912547E9BFB18
+              F1A51B75E865D4DA7195BF38B0904CFFB1C0F1B2F395DFD3470A682931FE54E8
+              7F1652EBE6534AFF19C6131C8FBFFC58D06734421AB24C2A0E9FBD0A8C13014C
+              0BA5EC7D44BA44336F8F731E857C7ABCD3638128150AF8D996F100148604B520
+              E1DB51FF4C71A2AC5A2C7CF2D2C61C8B3306C008ECBE0A5271079C8850CA7C8E
+              D4DA05B6FF60D569C6A4805FF28F477EACAAE25B4B29EF8C9BA70AB6FF3924B5
+              264261F841C415E378E53D676AFD0C0110A0670EECFA20881B01B58B91D01DD8
+              125A1CA9D9F4389E4C8C7E59F3D92C4E2834B139B2BED8CC11F0CEB8023F7731
+              26422AEEB0FBCA995F99670680C05FDD04C60981090BC5CC03925A15B5032F56
+              A377620A381E7553C002E25273AEA6DF1089750BC5CC0110575C8F9B3F08DD73
+              665610A70D800097AD8573CF067122608BE7E3CDBBDA8EFCBC5AF8A89102C6F3
+              D11A29A0AA985008717213E6555361F025683D6B257E761712C6382E7F7DD3CC
+              6AC1B4013006EEF92310270C18478B998725B6406CE6D0A4FDBEE3D9AAC363D5
+              12F4014ABAEE5C5B18164C48B0FEDDA8B68B89B0F92CD87CD6F459302D0044E0
+              CEEDD03347C078E0E76E96D665ABFD81976BD3774C0AB8515BB708BA716F5200
+              50B003FF8324CEEEA094D98738224E98877706019935005271D8B53588BEA8B6
+              A9DA2F802395C237D1BB40B50200B56B4028AEC74F805AF32DA8B562F303E0B6
+              DE82FABD62C22C9A23DCB97D7AA93065008CC0DD3B2019376042A27E76AF695D
+              3ACF1F7C65FC8DAE56046D90024A6D06845A4A93CEAFDC246DFA30129D1FD2E2
+              E897C1084E989B2F8154ACC90008B0B21B766C2EE7BEDAB3705B6EB5B90138A1
+              E3AB476195519C4864220B00276E274DA131EB889F3E8C443A2FC1CF6F177149
+              C60D777F64EAC7E2D40010F8C20E10E3028E50CA1E106F4ED866FA26343D352B
+              39A09AC18D446AD401251CB7C125E764EB2868212D383151BFF82010161362C7
+              A6204053C1E0940110E0DA4DB0697919005BBC0C6FEEA565E74FFEA4A7AA59DC
+              A857B3110AC5FD535C23507FF84D24DEBD54FDFCA711078CC3BE6BA7560B4E19
+              80640CEEBC1C8CE38012C6160F603CD142660ACE030A4EC4AF5927C3A79802C7
+              6B8A152D660571F7A0DA29E2B2697910A853C5E0940010819B2E829E0E011CB0
+              C53F217AC6729B3E724AD43F91BE4EB44611842A03A6B2961D7D07C21D49FCFC
+              BD20628CC31DDB8280350C809E0ED87921C161ABCC43DCBFD0624E54754AD1AF
+              A81B9D7823542014B7535E4B15D1DC0038B11B50FF1CC4A1A743B8F1A2534B85
+              930260043E7D1924630218515BBC07B735A5B981E9180B0A6EC432B61D560011
+              4291D29452A0AAC55170620E7EE9CBA88A18C3CE2DD0DD3E430004D8B80CAED9
+              50C929BB062772A32DA45145EA353C93A952AE010263DBE0503C8665987A4DD0
+              A46B2A62B347D150E25C55FB11059251B863DBC98FC5C90110D87B55D97955C1
+              F71F42428E16F3276F58EAA9052FCEF8635015AF358ADACCB4D754DF0AD60AAA
+              FBB13626C035EB83004E86415D0004F883F5B06241F0B72AD72AE603361F447F
+              5A869635DE6E82C88FD178BB4C7BBD8ADA7C1AB574A3BABBEC027BAF9CBC16D4
+              05201983CF5F55452F8A72BF5A2B6AA757F8C6D68064978F71DDE30C10E858E4
+              54809E894AF92ABE1BA55B80DE054120EB6150130011D87901242365322877A9
+              B2B8E2C04C55E5104BCE595EFDC88BC758B872CC4568A6EB5B62AA7C89F2B3D3
+              BD57D63F166BFE5FA0A703BEFA89A08088B050E03B081E0D7A1AAD285D4B93B4
+              CD5DCFBC2567B2765B0726FE4CA31E754B79935E8527150E790EE44BF093D7EB
+              0D1E2346E0D14FC1A665600411E15BC075E5910DB15128A7437539AD63CDB445
+              CB4BFE54950DAA585F61CBBD70A87FFCC0710C1060E352B87D6B39FAB0193880
+              D47DB9F3D755440194F904AFE23D2F40571BFCCB8B55B883816367198127F704
+              29600483F0B4C0FA5A63672A5AE3B32620AC0A7D2867AB32642D7CF4EBF0EC6B
+              C7F7AF3240804F7C00B6BFB7FA2EEFC7815BCB5F35929C954245FAA8307CD4E0
+              8414B779AF6BB5A038C08F1458BF04BEF1540D005251F89BEB211A06115A817F
+              045A1B497D2DEF9AEE177EFC6884177FE4F1FAF3215E79364421079D4B6C83D1
+              AEA6C2FB81EFA3F4273C18CEC20B8782010E04D4FFCCA5B0F14C4010609FC065
+              95451A658D2AF825F8E1231106FA0CAA41F3632DBC7BC40185CEC5B6767ECC68
+              635C8545C0F75058DD0DDF3D189C0C0E406F17ECBFA6FA2AFB7B04BE89E0D2E8
+              B45438FC8AC7ABCFB9E54C90713F07FA0CBD9B14918622503916972B3CA3F0BA
+              E740D885A7FE0F8C11D8B36DCC60E54155228D68486ADDDF73E9B9E5009F88AD
+              502C188AF9790D6B88C6A86880F2011457801B36C3C276305B7B83C25006FD22
+              55AE509871BF5F4F5B12C9BAB472432122D17815AC866AE0532F41614780FBAF
+              06B3675BB5E373CB08094D725E15162E0BD39248D424EA8A75ABB1FAF38AB10D
+              D58A5F289F073A04D8B004CCC2B6AA09BB8055E57C698A0A50D217F8FD9D1BE9
+              EC5E8048D06A1A4758BD711DEFBB64146BB34DDBBF2CEDC03DE5AD91D7EFAF7E
+              F80AD041933BBE4A0B1CF1D6313A389FFC28B4B65BC47D9EA27FA429EF029E68
+              025004DE0FFC77A5D2EF2370BEE91238A8E40B0771A242340A3E0AB6392F42D6
+              9110F010B0D5059600B754EC9B351300444FC7054308587021F02117B8027067
+              DF8ED32A15DCAF31FCF6390FC7CBA26B804781C3E50F2CCDABC1BF2E5AF1310D
+              7CC5057E01AC06AE0416F39B75EF9F8E28F00EF018D0E7FA168061E09BA7D1A8
+              D326B2A20B5ABDD36DC6EFE47772BAE4FF01025F0388DC63CBFE000000004945
+              4E44AE426082
+            }
+            Visible = False
+          end
+          object SortButton: TButton
             Left = 5
             Height = 25
-            Top = 181
-            Width = 166
+            Top = 208
+            Width = 160
             Align = alTop
             BorderSpacing.Around = 5
-            Caption = 'Очистить'
-            OnClick = ClearButtonClick
-            TabOrder = 3
+            Caption = 'Отсортировать'
+            Default = True
+            Enabled = False
+            OnClick = SortButtonClick
+            TabOrder = 2
           end
         end
         object DataSide: TPairSplitterSide
           Cursor = crArrow
-          Left = 181
-          Height = 485
+          Left = 175
+          Height = 445
           Top = 0
-          Width = 547
-          ClientWidth = 547
-          ClientHeight = 485
+          Width = 417
+          ClientWidth = 417
+          ClientHeight = 445
+          Constraints.MinWidth = 417
           object MemoSplitter: TPairSplitter
             Cursor = crVSplit
             Left = 0
-            Height = 485
+            Height = 445
             Top = 0
-            Width = 547
+            Width = 417
             Align = alClient
-            Position = 240
+            Position = 220
             SplitterType = pstVertical
             object InputSide: TPairSplitterSide
               Cursor = crArrow
               Left = 0
-              Height = 240
+              Height = 220
               Top = 0
-              Width = 547
-              ClientWidth = 547
-              ClientHeight = 240
+              Width = 417
+              ClientWidth = 417
+              ClientHeight = 220
+              Constraints.MinHeight = 220
               object InputLabel: TLabel
                 Left = 5
                 Height = 15
                 Top = 5
-                Width = 537
+                Width = 407
                 Align = alTop
                 BorderSpacing.Around = 5
                 Caption = 'Исходные данные:'
                 ParentColor = False
               end
               object InputMemo: TMemo
-                Left = 5
-                Height = 210
+                Left = 0
+                Height = 195
                 Top = 25
-                Width = 537
+                Width = 417
                 Align = alClient
-                BorderSpacing.Around = 5
                 BorderStyle = bsNone
                 OnChange = InputMemoChange
                 ScrollBars = ssAutoVertical
@@ -163,28 +273,28 @@ object SortsForm: TSortsForm
             object OutputSide: TPairSplitterSide
               Cursor = crArrow
               Left = 0
-              Height = 240
-              Top = 245
-              Width = 547
-              ClientWidth = 547
-              ClientHeight = 240
+              Height = 220
+              Top = 225
+              Width = 417
+              ClientWidth = 417
+              ClientHeight = 220
+              Constraints.MinHeight = 220
               object OutputLabel: TLabel
                 Left = 5
                 Height = 15
                 Top = 5
-                Width = 537
+                Width = 407
                 Align = alTop
                 BorderSpacing.Around = 5
                 Caption = 'Отсортированные данные:'
                 ParentColor = False
               end
               object OutputMemo: TMemo
-                Left = 5
-                Height = 210
+                Left = 0
+                Height = 195
                 Top = 25
-                Width = 537
+                Width = 417
                 Align = alClient
-                BorderSpacing.Around = 5
                 BorderStyle = bsNone
                 ReadOnly = True
                 ScrollBars = ssAutoVertical
@@ -196,7 +306,49 @@ object SortsForm: TSortsForm
       end
     end
     object StatisticsTab: TTabSheet
-      Caption = 'Характеристики сортировок'
+      Caption = 'Характеристики'
+      ClientHeight = 445
+      ClientWidth = 592
+      TabVisible = False
+      object StatsGrid: TStringGrid
+        Left = 0
+        Height = 445
+        Top = 0
+        Width = 592
+        Align = alClient
+        ColCount = 7
+        ExtendedSelect = False
+        FixedCols = 0
+        Flat = True
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goSmoothScroll]
+        RowCount = 1
+        TabOrder = 0
+        OnDrawCell = StatsGridDrawCell
+        Cells = (
+          7
+          0
+          0
+          'Номер'
+          1
+          0
+          'Вид'
+          2
+          0
+          'Тип'
+          3
+          0
+          'Элементов'
+          4
+          0
+          'Сравнений'
+          5
+          0
+          'Перестановок'
+          6
+          0
+          'Время'
+        )
+      end
     end
   end
   object MainMenu: TMainMenu
