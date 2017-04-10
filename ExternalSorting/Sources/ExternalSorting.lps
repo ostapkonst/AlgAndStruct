@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="21">
+      <Unit0>
+        <Filename Value="ExternalSorting.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <CursorPos Y="22"/>
+        <UsageCount Value="115"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="MainForm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SortsMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="76"/>
+        <CursorPos X="40" Y="52"/>
+        <UsageCount Value="115"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="AboutForm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="About"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="18" Y="3"/>
+        <UsageCount Value="111"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="ListIntegerUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="8"/>
+        <CursorPos X="51" Y="11"/>
+        <UsageCount Value="107"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="ListProfitUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="7"/>
+        <CursorPos X="26" Y="13"/>
+        <UsageCount Value="107"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="GenericListUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="231"/>
+        <CursorPos X="54" Y="238"/>
+        <UsageCount Value="102"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="SortsUnit.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="37"/>
+        <CursorPos X="3" Y="11"/>
+        <UsageCount Value="35"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="genericsortslist.pas"/>
+        <UnitName Value="GenericSortsList"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="11"/>
+        <UsageCount Value="19"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="GenericList.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="19" Y="23"/>
+        <UsageCount Value="25"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="C:\Software\Lazarus\fpc\3.0.2\source\rtl\inc\objpash.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="44"/>
+        <CursorPos X="23" Y="71"/>
+        <UsageCount Value="9"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="C:\Software\Lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2728"/>
+        <CursorPos Y="2738"/>
+        <UsageCount Value="4"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\Software\Lazarus\lcl\include\radiogroup.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="371"/>
+        <CursorPos Y="381"/>
+        <UsageCount Value="4"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\Software\Lazarus\fpc\3.0.2\source\rtl\objpas\classes\classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="583"/>
+        <CursorPos X="3" Y="603"/>
+        <UsageCount Value="4"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="C:\Software\Lazarus\lcl\stdctrls.pp"/>
+        <UnitName Value="StdCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="777"/>
+        <CursorPos X="14" Y="800"/>
+        <UsageCount Value="5"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="C:\Software\Lazarus\fpc\3.0.2\source\rtl\win\wininc\redef.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="733"/>
+        <CursorPos X="48" Y="745"/>
+        <UsageCount Value="7"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\Software\Lazarus\fpc\3.0.2\source\rtl\win\wininc\struct.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7002"/>
+        <CursorPos X="6" Y="7002"/>
+        <UsageCount Value="8"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="C:\Software\Lazarus\lcl\grids.pas"/>
+        <UnitName Value="Grids"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1332"/>
+        <CursorPos X="14" Y="1342"/>
+        <UsageCount Value="7"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="fileinfounit.pas"/>
+        <UnitName Value="FileInfoUnit"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="34" Y="79"/>
+        <UsageCount Value="27"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="C:\Software\Lazarus\fpc\3.0.2\source\rtl\win32\classes.pp"/>
+        <UnitName Value="Classes"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="18"/>
+        <UsageCount Value="7"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="C:\Software\Lazarus\fpc\3.0.2\source\rtl\inc\mathh.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="23" Y="104"/>
+        <UsageCount Value="9"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="C:\Software\Lazarus\fpc\3.0.2\source\rtl\win\wininc\ascdef.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="94"/>
+        <CursorPos X="10" Y="106"/>
+        <UsageCount Value="10"/>
+      </Unit20>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="296" Column="15" TopLine="286"/>
+      </Position1>
+      <Position2>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="297" Column="4" TopLine="286"/>
+      </Position2>
+      <Position3>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="193" TopLine="189"/>
+      </Position3>
+      <Position4>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="295" Column="4" TopLine="284"/>
+      </Position4>
+      <Position5>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="50" Column="17" TopLine="33"/>
+      </Position5>
+      <Position6>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="215" Column="33" TopLine="207"/>
+      </Position6>
+      <Position7>
+        <Filename Value="ListProfitUnit.pas"/>
+        <Caret Line="76" TopLine="62"/>
+      </Position7>
+      <Position8>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="56" Column="35" TopLine="45"/>
+      </Position8>
+      <Position9>
+        <Filename Value="ListProfitUnit.pas"/>
+        <Caret Line="62" Column="45" TopLine="50"/>
+      </Position9>
+      <Position10>
+        <Filename Value="ListProfitUnit.pas"/>
+        <Caret Line="62" Column="30" TopLine="52"/>
+      </Position10>
+      <Position11>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="33" Column="15" TopLine="21"/>
+      </Position11>
+      <Position12>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="316" Column="65" TopLine="25"/>
+      </Position12>
+      <Position13>
+        <Filename Value="ListIntegerUnit.pas"/>
+        <Caret Line="20" Column="24" TopLine="4"/>
+      </Position13>
+      <Position14>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="8" Column="42"/>
+      </Position14>
+      <Position15>
+        <Filename Value="ListIntegerUnit.pas"/>
+        <Caret Line="27" TopLine="8"/>
+      </Position15>
+      <Position16>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="100" TopLine="92"/>
+      </Position16>
+      <Position17>
+        <Filename Value="ListIntegerUnit.pas"/>
+        <Caret Line="27" TopLine="8"/>
+      </Position17>
+      <Position18>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="106" Column="28" TopLine="95"/>
+      </Position18>
+      <Position19>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="182" Column="14" TopLine="172"/>
+      </Position19>
+      <Position20>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="200" Column="32" TopLine="184"/>
+      </Position20>
+      <Position21>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="68" Column="21" TopLine="61"/>
+      </Position21>
+      <Position22>
+        <Filename Value="ListProfitUnit.pas"/>
+        <Caret Line="76" TopLine="61"/>
+      </Position22>
+      <Position23>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="121" Column="24" TopLine="119"/>
+      </Position23>
+      <Position24>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="246" Column="21" TopLine="231"/>
+      </Position24>
+      <Position25>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="219" Column="30" TopLine="209"/>
+      </Position25>
+      <Position26>
+        <Filename Value="GenericListUnit.pas"/>
+        <Caret Line="147" Column="76" TopLine="140"/>
+      </Position26>
+      <Position27>
+        <Filename Value="ExternalSorting.lpr"/>
+        <Caret Line="22"/>
+      </Position27>
+      <Position28>
+        <Filename Value="MainForm.pas"/>
+        <Caret Line="57" Column="41" TopLine="43"/>
+      </Position28>
+      <Position29>
+        <Filename Value="MainForm.pas"/>
+        <Caret Line="58" Column="41" TopLine="44"/>
+      </Position29>
+      <Position30>
+        <Filename Value="MainForm.pas"/>
+        <Caret Line="57" Column="41" TopLine="43"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <Watches Count="2">
+      <Item1>
+        <Expression Value="Windows"/>
+      </Item1>
+      <Item2>
+        <Expression Value="int"/>
+      </Item2>
+    </Watches>
+  </Debugging>
+</CONFIG>
