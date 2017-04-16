@@ -238,15 +238,19 @@ begin
       while not EOF(inp^) do
       begin
         v2 := FromTextFile(inp^);
-        if secRun and (v1 > v2) then
+        if secRun then
         begin
-          WriteLn(cur^);
-          if cur = @f1 then
-            cur := @f2
-          else
-            cur := @f1;
-          Inc(i);
-          Inc(Stat.swapCount);
+          Inc(Stat.compareCount);
+          if (v1 > v2) then
+          begin
+            WriteLn(cur^);
+            if cur = @f1 then
+              cur := @f2
+            else
+              cur := @f1;
+            Inc(i);
+            Inc(Stat.swapCount);
+          end;
         end;
         secRun := True;
         ToTextFile(cur^, v2);
