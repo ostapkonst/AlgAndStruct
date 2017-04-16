@@ -39,6 +39,7 @@
             this.toolLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.treePicture = new System.Windows.Forms.PictureBox();
+            this.clearButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
@@ -59,6 +60,7 @@
             // 
             // splitContainer.Panel1
             // 
+            this.splitContainer.Panel1.Controls.Add(this.clearButton);
             this.splitContainer.Panel1.Controls.Add(this.actionButton);
             this.splitContainer.Panel1.Controls.Add(this.valueBox);
             this.splitContainer.Panel1.Controls.Add(this.actionBox);
@@ -139,6 +141,7 @@
             // 
             this.deleteNode.AutoSize = true;
             this.deleteNode.Dock = System.Windows.Forms.DockStyle.Top;
+            this.deleteNode.Enabled = false;
             this.deleteNode.Location = new System.Drawing.Point(6, 42);
             this.deleteNode.Name = "deleteNode";
             this.deleteNode.Padding = new System.Windows.Forms.Padding(3);
@@ -147,6 +150,7 @@
             this.deleteNode.TabStop = true;
             this.deleteNode.Text = "Удалить вершину";
             this.deleteNode.UseVisualStyleBackColor = true;
+            this.deleteNode.CheckedChanged += new System.EventHandler(this.deleteNode_CheckedChanged);
             // 
             // addNode
             // 
@@ -161,6 +165,7 @@
             this.addNode.TabStop = true;
             this.addNode.Text = "Добавить вершину";
             this.addNode.UseVisualStyleBackColor = true;
+            this.addNode.CheckedChanged += new System.EventHandler(this.addNode_CheckedChanged);
             // 
             // statusStrip
             // 
@@ -195,6 +200,18 @@
             this.treePicture.TabStop = false;
             this.treePicture.Paint += new System.Windows.Forms.PaintEventHandler(this.treePicture_Paint);
             this.treePicture.Resize += new System.EventHandler(this.treePicture_Resize);
+            // 
+            // clearButton
+            // 
+            this.clearButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.clearButton.Enabled = false;
+            this.clearButton.Location = new System.Drawing.Point(6, 145);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(158, 23);
+            this.clearButton.TabIndex = 2;
+            this.clearButton.Text = "Очистить";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // MainForm
             // 
@@ -235,6 +252,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolCount;
         private System.Windows.Forms.GroupBox valueBox;
         private System.Windows.Forms.Button actionButton;
+        private System.Windows.Forms.Button clearButton;
     }
 }
 

@@ -46,20 +46,73 @@ namespace AVLTreeVisualizer
         {
             CircleNode value = new CircleNode((int)valueNode.Value);
 
-            if (addNode.Checked && Tree.Count < 30)
+            if (addNode.Checked)
+            {
                 Tree.Add(value);
-
-            if (deleteNode.Checked)
+                int minR = (int)valueNode.Minimum, maxR = (int)valueNode.Maximum + 1;
+                valueNode.Value = Rand.Next(minR, maxR);
+            }
+            else
+            {
                 Tree.Remove(value);
+                CircleNode first = Tree.FirstOrDefault();
+                if (first != null)
+                    valueNode.Value = first.Value;
+            }
 
-            valueNode.Value = Rand.Next((int)valueNode.Minimum, (int)valueNode.Maximum + 1);
+            switch (Tree.Count)
+            {
+                case 30:
+                    addNode.Enabled = false;
+                    deleteNode.Checked = true;
+                    break;
+                case 0:
+                    deleteNode.Enabled = false;
+                    addNode.Checked = true;
+                    clearButton.Enabled = false;
+                    break;
+                default:
+                    addNode.Enabled = true;
+                    deleteNode.Enabled = true;
+                    clearButton.Enabled = true;
+                    break;
+            }
+
             toolCount.Text = Tree.Count.ToString();
             treePicture.Invalidate();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            valueNode.Value = Rand.Next((int)valueNode.Minimum, (int)valueNode.Maximum + 1);
+            int min = (int)valueNode.Minimum, max = (int)valueNode.Maximum + 1;
+            valueNode.Value = Rand.Next(min, max);
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            Tree.Clear();
+
+            toolCount.Text = "0";
+            clearButton.Enabled = false;
+            addNode.Enabled = true;
+            addNode.Checked = true;
+            deleteNode.Enabled = false;
+
+            treePicture.Invalidate();
+        }
+
+        private void addNode_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!addNode.Checked) return;
+
+            int minR = (int)valueNode.Minimum, maxR = (int)valueNode.Maximum + 1;
+            valueNode.Value = Rand.Next(minR, maxR);
+        }
+
+        private void deleteNode_CheckedChanged(object sender, EventArgs e)
+        {
+            if (deleteNode.Checked)
+                valueNode.Value = Tree.First().Value;
         }
     }
 }

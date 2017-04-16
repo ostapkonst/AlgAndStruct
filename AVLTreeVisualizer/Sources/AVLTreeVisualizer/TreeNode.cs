@@ -7,9 +7,6 @@ using System.Drawing;
 
 namespace AVLTreeVisualizer
 {
-
-    // Класс AVLTreeNode реализует один узел АВЛ дерева 
-
     public class AVLTreeNode<TNode> : IComparable<TNode> where TNode : IDrawable, IComparable
     {
         AVLTree<TNode> _tree;
@@ -223,7 +220,6 @@ namespace AVLTreeVisualizer
                 return TreeState.Balanced;
             }
         }
-
 
         private int BalanceFactor
         {
