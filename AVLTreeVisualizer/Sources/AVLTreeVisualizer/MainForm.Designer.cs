@@ -75,6 +75,7 @@
             this.splitContainer.Size = new System.Drawing.Size(834, 512);
             this.splitContainer.SplitterDistance = 170;
             this.splitContainer.TabIndex = 0;
+            this.splitContainer.TabStop = false;
             // 
             // clearButton
             // 
@@ -83,7 +84,7 @@
             this.clearButton.Location = new System.Drawing.Point(6, 145);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(158, 23);
-            this.clearButton.TabIndex = 2;
+            this.clearButton.TabIndex = 3;
             this.clearButton.Text = "Очистить";
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
@@ -108,7 +109,7 @@
             this.valueBox.Name = "valueBox";
             this.valueBox.Padding = new System.Windows.Forms.Padding(6);
             this.valueBox.Size = new System.Drawing.Size(158, 45);
-            this.valueBox.TabIndex = 2;
+            this.valueBox.TabIndex = 1;
             this.valueBox.TabStop = false;
             this.valueBox.Text = "Значение";
             // 
@@ -128,7 +129,7 @@
             0});
             this.valueNode.Name = "valueNode";
             this.valueNode.Size = new System.Drawing.Size(146, 20);
-            this.valueNode.TabIndex = 1;
+            this.valueNode.TabIndex = 0;
             this.valueNode.Value = new decimal(new int[] {
             10,
             0,
@@ -145,7 +146,7 @@
             this.actionBox.Name = "actionBox";
             this.actionBox.Padding = new System.Windows.Forms.Padding(6);
             this.actionBox.Size = new System.Drawing.Size(158, 71);
-            this.actionBox.TabIndex = 1;
+            this.actionBox.TabIndex = 0;
             this.actionBox.TabStop = false;
             this.actionBox.Text = "Действие";
             // 
@@ -173,7 +174,7 @@
             this.addNode.Name = "addNode";
             this.addNode.Padding = new System.Windows.Forms.Padding(3);
             this.addNode.Size = new System.Drawing.Size(146, 23);
-            this.addNode.TabIndex = 1;
+            this.addNode.TabIndex = 0;
             this.addNode.TabStop = true;
             this.addNode.Text = "Добавить вершину";
             this.addNode.UseVisualStyleBackColor = true;
@@ -187,7 +188,7 @@
             this.statusStrip.Location = new System.Drawing.Point(0, 490);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(660, 22);
-            this.statusStrip.TabIndex = 1;
+            this.statusStrip.TabIndex = 0;
             this.statusStrip.Text = "statusStrip1";
             // 
             // toolLabel
