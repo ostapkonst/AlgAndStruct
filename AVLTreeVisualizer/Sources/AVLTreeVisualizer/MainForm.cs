@@ -114,5 +114,17 @@ namespace AVLTreeVisualizer
             if (deleteNode.Checked)
                 valueNode.Value = Tree.First().Value;
         }
+
+        private void treePicture_MouseClick(object sender, MouseEventArgs e)
+        {
+            AVLTreeNode<CircleNode> selected;
+            using (Graphics gr = treePicture.CreateGraphics())
+            {
+                selected = Tree.Head?.NodeAtPoint(gr, e.Location);
+            }
+
+            if (selected != null)
+                valueNode.Value = selected.Value.Value;
+        }
     }
 }

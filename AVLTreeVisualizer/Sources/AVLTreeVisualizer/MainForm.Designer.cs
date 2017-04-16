@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer = new System.Windows.Forms.SplitContainer();
+            this.clearButton = new System.Windows.Forms.Button();
             this.actionButton = new System.Windows.Forms.Button();
             this.valueBox = new System.Windows.Forms.GroupBox();
             this.valueNode = new System.Windows.Forms.NumericUpDown();
@@ -39,7 +40,6 @@
             this.toolLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.treePicture = new System.Windows.Forms.PictureBox();
-            this.clearButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
@@ -75,6 +75,18 @@
             this.splitContainer.Size = new System.Drawing.Size(834, 512);
             this.splitContainer.SplitterDistance = 170;
             this.splitContainer.TabIndex = 0;
+            // 
+            // clearButton
+            // 
+            this.clearButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.clearButton.Enabled = false;
+            this.clearButton.Location = new System.Drawing.Point(6, 145);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(158, 23);
+            this.clearButton.TabIndex = 2;
+            this.clearButton.Text = "Очистить";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // actionButton
             // 
@@ -199,19 +211,8 @@
             this.treePicture.TabIndex = 0;
             this.treePicture.TabStop = false;
             this.treePicture.Paint += new System.Windows.Forms.PaintEventHandler(this.treePicture_Paint);
+            this.treePicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.treePicture_MouseClick);
             this.treePicture.Resize += new System.EventHandler(this.treePicture_Resize);
-            // 
-            // clearButton
-            // 
-            this.clearButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.clearButton.Enabled = false;
-            this.clearButton.Location = new System.Drawing.Point(6, 145);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(158, 23);
-            this.clearButton.TabIndex = 2;
-            this.clearButton.Text = "Очистить";
-            this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // MainForm
             // 

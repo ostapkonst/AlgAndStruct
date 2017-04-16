@@ -107,6 +107,27 @@ namespace AVLTreeVisualizer
         }
         #endregion
 
+        #region Принадлежность точки узлу 
+        public AVLTreeNode<TNode> NodeAtPoint(Graphics gr, PointF target_pt)
+        {
+            if (Value.IsAtPoint(gr, MyFont, Center, target_pt)) return this;
+
+            if (Left != null)
+            {
+                AVLTreeNode<TNode> hit_node = Left.NodeAtPoint(gr, target_pt);
+                if (hit_node != null) return hit_node;
+            }
+
+            if (Right != null)
+            {
+                AVLTreeNode<TNode> hit_node = Right.NodeAtPoint(gr, target_pt);
+                if (hit_node != null) return hit_node;
+            }
+
+            return null;
+        }
+        #endregion
+
         #region Конструктор
         public AVLTreeNode(TNode value, AVLTreeNode<TNode> parent, AVLTree<TNode> tree)
         {
