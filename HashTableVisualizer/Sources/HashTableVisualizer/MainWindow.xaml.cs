@@ -41,9 +41,9 @@ namespace HashTableVisualizer
                 ListViewData lvc = (ListViewData)item;
 
                 XElement xRow = new XElement("Row");
-                xRow.Add(new XElement("id", lvc.Id));
-                xRow.Add(new XElement("name", lvc.Name));
-                xRow.Add(new XElement("count", lvc.Count));
+                xRow.Add(new XElement("Id", lvc.Id));
+                xRow.Add(new XElement("Name", lvc.Name));
+                xRow.Add(new XElement("Count", lvc.Count));
 
                 xeRoot.Add(xRow);
             }
@@ -67,9 +67,9 @@ namespace HashTableVisualizer
                 foreach (var row in rowsFromFile)
                 {
                     rows.Add(new ListViewData(
-                        id: row.Element("id").Value,
-                        name: row.Element("name").Value,
-                        count: row.Element("count").Value));
+                        id: row.Element("Id").Value,
+                        name: row.Element("Name").Value,
+                        count: row.Element("Count").Value));
                 }
             }
 
@@ -94,8 +94,7 @@ namespace HashTableVisualizer
             try
             {
                 Hash.Add(val.Id, val);
-                removeButton.IsEnabled = true;
-                searchButton.IsEnabled = true;
+                idText.Text = "";
                 dataChanged = true;
                 ShowData();
             }
@@ -113,20 +112,15 @@ namespace HashTableVisualizer
         {
             if (!Hash.Remove(idText.Text)) return;
 
+            idText.Text = "";
+            dataChanged = true;
+            ShowData();
+
             MessageBox.Show(
                 "Значение было успешно удалено!",
                 this.Title,
                 MessageBoxButton.OK,
                 MessageBoxImage.Information);
-
-            if (Hash.Count == 0)
-            {
-                removeButton.IsEnabled = false;
-                searchButton.IsEnabled = false;
-            }
-
-            dataChanged = true;
-            ShowData();
         }
 
         private void searchButton_Click(object sender, RoutedEventArgs e)
@@ -151,12 +145,6 @@ namespace HashTableVisualizer
         {
             foreach (var row in GetRows())
                 Hash.Add(row.Id, row);
-
-            if (Hash.Count > 0)
-            {
-                removeButton.IsEnabled = true;
-                searchButton.IsEnabled = true;
-            }
 
             ShowData();
         }
@@ -213,6 +201,36 @@ namespace HashTableVisualizer
 
             if (selected != null)
                 idText.Text = selected?.Id;
+        }
+
+        private void TextChangedHandler(object sender, TextChangedEventArgs e)
+        {
+            if (idText.Text == "")
+            {
+                addButton.IsEnabled = false;
+                removeButton.IsEnabled = false;
+                searchButton.IsEnabled = false;
+            }
+            else
+            {
+                addButton.IsEnabled = nameText.Text.Trim() != "" && countText.Text != "";
+
+                if (Hash.Count > 0)
+                {
+                    removeButton.IsEnabled = true;
+                    searchButton.IsEnabled = true;
+                }
+            }
+        }
+
+        private void aboutButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(
+                "Автор: Константинов О. В.\n" +
+                "Преподаватель: Елсукова Е. А.\n" +
+                "Группа: Б8219\n" +
+                "Год: 2017",
+                "О программе...");
         }
     }
 }

@@ -1,53 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Data>
   <Row>
-    <id>78830294</id>
-    <name>PREMIUM ФАРА ПРАВ П/КОРРЕКТОР</name>
-    <count>174</count>
+    <Id>78830294</Id>
+    <Name>PREMIUM ФАРА ПРАВ П/КОРРЕКТОР</Name>
+    <Count>174</Count>
   </Row>
   <Row>
-    <id>82188843</id>
-    <name>SCANIA 114 ФОНАРЬ ЗАДН ВНЕШН ЛЕВ</name>
-    <count>232</count>
+    <Id>82188843</Id>
+    <Name>SCANIA 114 ФОНАРЬ ЗАДН ВНЕШН ЛЕВ</Name>
+    <Count>232</Count>
   </Row>
   <Row>
-    <id>81537418</id>
-    <name>MAGNUM ФАРА ПРОТИВОТУМ Л=П</name>
-    <count>616</count>
+    <Id>81537418</Id>
+    <Name>MAGNUM ФАРА ПРОТИВОТУМ Л=П</Name>
+    <Count>616</Count>
   </Row>
   <Row>
-    <id>41463790</id>
-    <name>FH/FM ФАРА ПРОТИВОТУМ П</name>
-    <count>131</count>
+    <Id>41463790</Id>
+    <Name>FH/FM ФАРА ПРОТИВОТУМ П</Name>
+    <Count>131</Count>
   </Row>
   <Row>
-    <id>49788176</id>
-    <name>SCANIA 114 {05-} ФАРА ЛЕВ</name>
-    <count>223</count>
+    <Id>49788176</Id>
+    <Name>SCANIA 114 {05-} ФАРА ЛЕВ</Name>
+    <Count>223</Count>
   </Row>
   <Row>
-    <id>50226014</id>
-    <name>FH/FM ФАРА ПРАВ П/КОРРЕКТОР С УНИВЕР.</name>
-    <count>891</count>
+    <Id>50226014</Id>
+    <Name>FH/FM ФАРА ПРАВ П/КОРРЕКТОР С УНИВЕР.</Name>
+    <Count>891</Count>
   </Row>
   <Row>
-    <id>71045012</id>
-    <name>FE/FL ФАРА ПРАВ П/КОРРЕКТОР</name>
-    <count>711</count>
+    <Id>71045012</Id>
+    <Name>FE/FL ФАРА ПРАВ П/КОРРЕКТОР</Name>
+    <Count>711</Count>
   </Row>
   <Row>
-    <id>39138505</id>
-    <name>MAGNUM ФАРА ПРАВ П/КОРРЕКТОР</name>
-    <count>837</count>
+    <Id>39138505</Id>
+    <Name>MAGNUM ФАРА ПРАВ П/КОРРЕКТОР</Name>
+    <Count>837</Count>
   </Row>
   <Row>
-    <id>45789959</id>
-    <name>SCANIA 114 ФАРА ПРОТИВОТУМ ПРАВ</name>
-    <count>384</count>
+    <Id>45789959</Id>
+    <Name>SCANIA 114 ФАРА ПРОТИВОТУМ ПРАВ</Name>
+    <Count>384</Count>
   </Row>
   <Row>
-    <id>77215904</id>
-    <name>PREMIUM УКАЗ.ПОВОРОТА УГЛОВОЙ ПРАВ БЕЛ</name>
-    <count>607</count>
+    <Id>77215904</Id>
+    <Name>PREMIUM УКАЗ.ПОВОРОТА УГЛОВОЙ ПРАВ БЕЛ</Name>
+    <Count>607</Count>
   </Row>
 </Data>

@@ -9,12 +9,12 @@
     <Canvas>
         <Label x:Name="idLabel" Content="Код товара:" Canvas.Left="10" Canvas.Top="10"/>
         <TextBox x:Name="idText" Height="23" Canvas.Left="89" TextWrapping="Wrap" Canvas.Top="13" Width="357" 
-                 PreviewTextInput="PreviewTextInputHandler" DataObject.Pasting="PastingHandler" PreviewKeyDown="PreviewKeyDownHandler"/>
+                 PreviewTextInput="PreviewTextInputHandler" DataObject.Pasting="PastingHandler" PreviewKeyDown="PreviewKeyDownHandler" TextChanged="TextChangedHandler"/>
         <Label x:Name="nameLabel" Content="Наименование товара:" Canvas.Left="10" Canvas.Top="41"/>
-        <TextBox x:Name="nameText" Height="23" Canvas.Left="151" TextWrapping="Wrap" Canvas.Top="44" Width="295"/>
+        <TextBox x:Name="nameText" Height="23" Canvas.Left="151" TextWrapping="Wrap" Canvas.Top="44" Width="295" TextChanged="TextChangedHandler"/>
         <Label x:Name="countLabel" Content="Количество продаж:" Canvas.Left="10" Canvas.Top="72"/>
         <TextBox x:Name="countText" Height="23" Canvas.Left="138" TextWrapping="Wrap" Canvas.Top="75" Width="308" 
-                 PreviewTextInput="PreviewTextInputHandler" DataObject.Pasting="PastingHandler" PreviewKeyDown="PreviewKeyDownHandler"/>
+                 PreviewTextInput="PreviewTextInputHandler" DataObject.Pasting="PastingHandler" PreviewKeyDown="PreviewKeyDownHandler" TextChanged="TextChangedHandler"/>
         <ListView x:Name="profitList" Height="220" Canvas.Left="10" Canvas.Top="130" Width="436" PreviewMouseLeftButtonUp="profitList_PreviewMouseLeftButtonUp">
             <ListView.View>
                 <GridView>
@@ -24,8 +24,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="addButton" Content="Добавить" Canvas.Left="10" Canvas.Top="103" Width="75" Click="addButton_Click"/>
+        <Button x:Name="addButton" Content="Добавить" Canvas.Left="10" Canvas.Top="103" Width="75" Click="addButton_Click" IsEnabled="False"/>
         <Button x:Name="removeButton" Content="Удалить" Canvas.Left="90" Canvas.Top="103" Width="75" Click="removeButton_Click" IsEnabled="False"/>
         <Button x:Name="searchButton" Content="Найти" Canvas.Left="170" Canvas.Top="103" Width="75" Click="searchButton_Click" IsEnabled="False"/>
+        <Button x:Name="aboutButton" Content="Автор" Canvas.Left="371" Canvas.Top="103" Width="75" Click="aboutButton_Click"/>
     </Canvas>
 </Window>
