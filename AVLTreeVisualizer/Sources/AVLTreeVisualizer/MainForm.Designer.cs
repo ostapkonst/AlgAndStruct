@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer = new System.Windows.Forms.SplitContainer();
+            this.aboutButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
             this.actionButton = new System.Windows.Forms.Button();
             this.valueBox = new System.Windows.Forms.GroupBox();
@@ -40,7 +41,6 @@
             this.toolLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.treePicture = new System.Windows.Forms.PictureBox();
-            this.aboutButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
@@ -78,6 +78,17 @@
             this.splitContainer.SplitterDistance = 170;
             this.splitContainer.TabIndex = 0;
             this.splitContainer.TabStop = false;
+            // 
+            // aboutButton
+            // 
+            this.aboutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.aboutButton.Location = new System.Drawing.Point(6, 483);
+            this.aboutButton.Name = "aboutButton";
+            this.aboutButton.Size = new System.Drawing.Size(158, 23);
+            this.aboutButton.TabIndex = 4;
+            this.aboutButton.Text = "Автор";
+            this.aboutButton.UseVisualStyleBackColor = true;
+            this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
             // 
             // clearButton
             // 
@@ -216,17 +227,6 @@
             this.treePicture.Paint += new System.Windows.Forms.PaintEventHandler(this.treePicture_Paint);
             this.treePicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.treePicture_MouseClick);
             this.treePicture.Resize += new System.EventHandler(this.treePicture_Resize);
-            // 
-            // aboutButton
-            // 
-            this.aboutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.aboutButton.Location = new System.Drawing.Point(6, 483);
-            this.aboutButton.Name = "aboutButton";
-            this.aboutButton.Size = new System.Drawing.Size(158, 23);
-            this.aboutButton.TabIndex = 1;
-            this.aboutButton.Text = "Автор";
-            this.aboutButton.UseVisualStyleBackColor = true;
-            this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
             // 
             // MainForm
             // 
