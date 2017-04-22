@@ -40,6 +40,7 @@
             this.toolLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.treePicture = new System.Windows.Forms.PictureBox();
+            this.aboutButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
@@ -60,6 +61,7 @@
             // 
             // splitContainer.Panel1
             // 
+            this.splitContainer.Panel1.Controls.Add(this.aboutButton);
             this.splitContainer.Panel1.Controls.Add(this.clearButton);
             this.splitContainer.Panel1.Controls.Add(this.actionButton);
             this.splitContainer.Panel1.Controls.Add(this.valueBox);
@@ -215,6 +217,17 @@
             this.treePicture.MouseClick += new System.Windows.Forms.MouseEventHandler(this.treePicture_MouseClick);
             this.treePicture.Resize += new System.EventHandler(this.treePicture_Resize);
             // 
+            // aboutButton
+            // 
+            this.aboutButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.aboutButton.Location = new System.Drawing.Point(6, 483);
+            this.aboutButton.Name = "aboutButton";
+            this.aboutButton.Size = new System.Drawing.Size(158, 23);
+            this.aboutButton.TabIndex = 1;
+            this.aboutButton.Text = "Автор";
+            this.aboutButton.UseVisualStyleBackColor = true;
+            this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +268,7 @@
         private System.Windows.Forms.GroupBox valueBox;
         private System.Windows.Forms.Button actionButton;
         private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Button aboutButton;
     }
 }
 

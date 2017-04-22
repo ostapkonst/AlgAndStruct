@@ -126,5 +126,15 @@ namespace AVLTreeVisualizer
             if (selected != null)
                 valueNode.Value = selected.Value.Value;
         }
+
+        private void aboutButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+                "Автор: Константинов О. В.\n" +
+                "Преподаватель: Елсукова Е. А.\n" +
+                "Группа: Б8219\n" +
+                "Год: 2017",
+                "О программе...");
+        }
     }
 }
