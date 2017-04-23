@@ -8,7 +8,7 @@ namespace HashTableVisualizer
 {
     public class HashTable<TKey, TValue> where TValue : class
     {
-        // Если заполнение массива первышает 75% - массив увеличивается.     
+        // Если заполнение массива превышает 75% - массив увеличивается.     
         const double _fillFactor = 0.75;
 
         int _maxItemsAtCurrentSize;
@@ -16,7 +16,7 @@ namespace HashTableVisualizer
 
         HashTableArray<TKey, TValue> _array;
 
-        public HashTable() : this(1000)
+        public HashTable() : this(100)
         {
         }
 
